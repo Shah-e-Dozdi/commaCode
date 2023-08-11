@@ -1,0 +1,9 @@
+import copy
+
+def commaCode(Table):
+    newTable = copy.copy(Table)
+    if len(newTable) > 1:
+        newTable[-1] = 'and ' + newTable[-1]
+    for i in newTable[:-1]:
+        print(i, end=', ')
+    print(newTable[-1])
